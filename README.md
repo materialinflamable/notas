@@ -1,54 +1,28 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Notas, una página con recursos simples
 
-## 🚀 Quick start
+Notas es una página simple con recursos sobre matemáticas y programación en español. Es un proyecto open-source. Para colaborar, puedes escribir pequeñas notas en documentos `.mdx` y ponerlos en `./src/pages/notas`. Éstos `.mdx` compilarán el código TeX que escribas. En el futuro también aceptarán snippets de código.
 
-1.  **Create a Gatsby site.**
+## Un ejemplo de una contribución simple
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+```
+---
+title: Determinante de una matriz 2x2
+date: "2021-11-29"
+summary: "Cómo computar el determinante de una matriz 2x2"
+categories:
+    - Álgebra Lineal
+show: true
+---
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+# Determinante de una matrix 2x2
 
-2.  **Start developing.**
+Para computar el determinante de una matriz de tamaño $2\times 2$,
+puedes seguir esta fórmula:
+$$
+\det\left(\begin{bmatrix}a,b\\c,d\end{bmatrix}\right) = ad - bc
+$$
+```
 
-    Navigate into your new site’s directory and start it up.
+## Compilando la página localmente
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+Esta página fue construida con [gatsby.js](https://www.gatsbyjs.com/docs/tutorial/part-0/). Instala la herramienta `gatsby-cli` y corre `gatsby develop` en la terminal.

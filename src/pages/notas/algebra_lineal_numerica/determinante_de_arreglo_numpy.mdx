@@ -1,0 +1,24 @@
+---
+title: Determinante de una matriz en NumPy
+date: "2021-11-29"
+summary: "Cómo computar un determinante usando NumPy"
+categories:
+    - Python
+    - NumPy
+    - Álgebra Lineal
+show: true
+---
+
+# Determinante de un arreglo en NumPy
+
+Para computar el determinante de un arreglo $A$
+
+```python
+import numpy as np
+
+A = np.array([
+    [2.0, 3.0],
+    [-1.0, 5.5]
+])
+print(np.linalg.det(A))
+```
