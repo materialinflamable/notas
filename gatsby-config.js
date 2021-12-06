@@ -13,7 +13,12 @@ module.exports = {
           default: require.resolve(`./src/components/layout.js`)
         },
 				remarkPlugins: [require('remark-math')],
-      }
+      },
+      gatsbyRemarkPlugins: [
+        {
+          resolve: `gatsby-remark-highlight-code`,
+        },
+      ],
     },
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
@@ -29,6 +34,9 @@ module.exports = {
               // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
               strict: `ignore`
             }
+          },
+          {
+            resolve: `gatsby-remark-highlight-code`,
           }
         ],
       },

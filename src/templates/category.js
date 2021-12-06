@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import NotaBanner from '../components/notaBanner'
 
 
 const Category = ({ pageContext: { category }, data: { allMdx } }) => {
@@ -11,27 +12,7 @@ const Category = ({ pageContext: { category }, data: { allMdx } }) => {
         <Layout>
             <h2>{category}</h2>
             {nodes.map(node => (
-                <div key={node.id}>
-                    <h3>
-                        <Link to={node.fields.slug}>
-                            {node.frontmatter.title}{" "}
-                        </Link>
-                    </h3>
-                    <span>
-                        {node.frontmatter.date}{" "}
-                    </span>
-                    <p>
-                    {node.frontmatter.categories.map((category, index, arr) => {
-                        if (arr.length === index + 1) {
-                            return (<span>{category}</span>)
-                        }
-                        else {
-                            return (<span>{category} - </span>)
-                        }
-                    })}
-                    </p>
-                    <p>{node.frontmatter.summary}</p>
-                </div>
+                <NotaBanner node={node}></NotaBanner>
             ))}
         </Layout>
     )

@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet"
 import { MDXProvider } from "@mdx-js/react"
 import "katex/dist/katex.min.css"
 import Heading from "./Heading"
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 
 const shortcodes = { Heading }
 
@@ -17,6 +18,7 @@ class ExportLayout extends React.Component {
     constructor(props) {
         super(props);
         this.props = props;
+        deckDeckGoHighlightElement();
     }
 
     render () {
@@ -35,6 +37,7 @@ class ExportLayout extends React.Component {
                     </Link>
                     <ul style={{ listStyle: `none`, float: `right` }}>
                         <ListLink to="/todas/">Todas las notas</ListLink>
+                        <ListLink to="/">Categorías</ListLink>
                     </ul>
                 </header>
                 {React.Children.map(this.props.children, (c) => <MDXProvider components={shortcodes}>{c}</MDXProvider>)}
